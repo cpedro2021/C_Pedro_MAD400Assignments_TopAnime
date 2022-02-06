@@ -1,9 +1,7 @@
-{{ animeList.readContent(0) }}
-{{ animeList.readContent(1) }}
-{{ animeList.readContent(2) }}
-<div id="anime"></div>
-<img id="image"/>
-<div id="anime"></div>
-<img id="image"/>
-<div id="anime"></div>
-<img id="image"/>
+<div class="content" >
+    <h2>{{ content ? content.title : 'No Title Found' }}</h2>
+    <p>Studio: {{ content ? content.creator : 'No Studio Found' }}</p>
+    <img src="{{ content ? content.imgURL : 'no image'}}"  (click)="imageClicked()"/>
+    <p>{{ content ? content.description : 'No Synopsis Found'}}</p>
+    <p>Genres: {{ content ? content.type : 'No Genre Found' }}</p>
+</div>
